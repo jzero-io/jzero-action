@@ -1,3 +1,3 @@
 FROM jaronnie/jzero:latest
 
-CMD ["--help"]
+CMD ["jzero", "-h"]
