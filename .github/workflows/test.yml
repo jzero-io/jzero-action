@@ -16,3 +16,6 @@ jobs:
       - uses: ./
         with:
           args: gen sdk --module github.com/jzero/test -d test
+
+      - name: list test sdk
+        run: ls -l test
