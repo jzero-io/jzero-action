@@ -15,4 +15,4 @@ jobs:
 
       - uses: ./
         with:
-          args: version
+          args: gen sdk --module github.com/jzero/test -d test
