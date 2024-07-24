@@ -1,0 +1,13 @@
+name: jzero-action-test
+
+on:
+  push:
+    branches:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ../../action.yml
+        with:
+          args: version

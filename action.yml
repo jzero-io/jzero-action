@@ -1,0 +1,17 @@
+name: 'Jzero Action'
+description: 'Executes commands using the Jzero tool.'
+
+author: '<Your Name or Organization>'
+branding:
+  icon: 'terminal'
+  color: 'blue'
+
+inputs:
+  args:
+    description: 'Arguments to pass to the Jzero command.'
+    required: true
+    default: ''
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
