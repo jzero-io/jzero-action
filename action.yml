@@ -1,7 +1,7 @@
 name: 'Jzero Action'
 description: 'Executes commands using the Jzero tool.'
 
-author: '<Your Name or Organization>'
+author: 'jzero-io'
 branding:
   icon: 'terminal'
   color: 'blue'
