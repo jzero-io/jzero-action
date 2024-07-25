@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package host;
+
+import "google/api/annotations.proto";
+import "validate/validate.proto";
+import "grpc-gateway/protoc-gen-openapiv2/options/annotations.proto";
+
+option go_package = "./pb/host_racer";
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+    info: {
+        version: "v1";
+    };
+};
+
+
+message HealthStatus {
+    string status = 1;
+    map<string, Component> components = 2;
+}
+
+message Component {
+    string status = 1;
+    map<string, string> details = 2;
+}
+
+message Empty {
+}
+
+
+service HostRacer {
+    rpc Health(Empty) returns(HealthStatus) {
+        option (google.api.http) = {
+            get: "/api/v1/health"
+        };
+    };
+}

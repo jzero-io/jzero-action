@@ -13,9 +13,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: ./
+      - uses: jzero-io/jzero-action@v0.0.1
         with:
           args: gen sdk --module github.com/jzero/test -d test
 
-      - name: list test sdk
-        run: ls -l test
+      - uses: jzero-io/jzero-action@v0.0.1
+        with:
+          args: gen zrpcclient
+
+      - name: list test sdk and client
+        run: ls -l test; ls -l zrpcclient-go
