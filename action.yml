@@ -11,7 +11,15 @@ inputs:
     description: 'Arguments to pass to the Jzero command.'
     required: true
     default: ''
+  version:
+    description: 'Version of the Jzero image to use.'
+    required: false
+    default: 'latest'
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  build-args:
+    JZERO_VERSION: ${{ inputs.version }}
+  args:
+    - ${{ inputs.args }}
