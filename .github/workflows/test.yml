@@ -13,6 +13,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: jzero-io/jzero-action@v0.0.2
+        with:
+          args: version
+          version: v0.22.0
+
       - uses: jzero-io/jzero-action@v0.0.1
         with:
           args: gen sdk --module github.com/jzero/test -d test
