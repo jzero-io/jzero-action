@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: jzero-io/jzero-action@v0.0.2
+      - uses: jzero-io/jzero-action@v0.0.3
         with:
           args: version
           version: v0.22.0
