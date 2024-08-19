@@ -17,3 +17,15 @@ jobs:
         with:
           args: version
           version: v0.22.0
+
+      - uses: ./
+        with:
+          args: version
+          # user latest always
+
+      - uses: ./
+        with:
+          args: gen sdk --module github.com/jzero/test -d test
+
+      - name: list test sdk
+        run: ls -l test
