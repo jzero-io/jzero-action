@@ -17,7 +17,9 @@ inputs:
     default: 'latest'
 
 runs:
-  using: 'docker'
-  image: 'jaronnie/jzero:${{inputs.version}}'
-  args:
-    - ${{ inputs.args }}
+  using: 'composite'
+  steps:
+    - name: Run Jzero
+      uses: docker://jaronnie/jzero:${{ inputs.version }}
+      with:
+        args: ${{ inputs.args }}
