@@ -19,9 +19,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Set up docker
-      uses: docker-practice/actions-setup-docker@master
-
     - name: Run Jzero container
       shell: bash
       run: |
