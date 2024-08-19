@@ -19,7 +19,10 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Run Jzero
-      uses: docker://jaronnie/jzero:${{ inputs.version }}
-      with:
-        args: ${{ inputs.args }}
+    - name: Set up docker
+      uses: docker-practice/actions-setup-docker@master
+
+    - name: Run Jzero container
+      run: |
+        docker run --rm jaronnie/jzero:${{inputs.version}} ${{inputs.args}} 
+        
