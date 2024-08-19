@@ -13,16 +13,19 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: ./
+      - uses: jzero-io/jzero-action@v1
         with:
           args: version
           version: v0.22.0
 
-      - uses: ./
+      - name: cd examples
+        run: cd examples
+
+      - uses: jzero-io/jzero-action@v1
         with:
           args: gen
 
-      - uses: ./
+      - uses: jzero-io/jzero-action@v1
         with:
           args: gen sdk --module github.com/jzero/test --output test
 
