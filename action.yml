@@ -23,6 +23,7 @@ runs:
       uses: docker-practice/actions-setup-docker@master
 
     - name: Run Jzero container
+      shell: bash
       run: |
         docker run --rm jaronnie/jzero:${{inputs.version}} ${{inputs.args}} 
         
