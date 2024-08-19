@@ -20,13 +20,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: jzero-io/jzero-action@v0.0.1
+      - uses: jzero-io/jzero-action@v1
         with:
-          args: gen sdk --module github.com/jzero/test -d test
+          args: gen sdk --module github.com/jzero/test --output test
           version: v0.23.4
 ```
-
-## References
-
-* https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-docker-container-action
-* https://github.com/orgs/community/discussions/115697
