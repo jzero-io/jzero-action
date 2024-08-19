@@ -25,6 +25,10 @@ jobs:
 
       - uses: ./
         with:
+          args: new test --output .
+
+      - uses: ./
+        with:
           args: gen sdk --module github.com/jzero/test --output test
 
       - name: list test sdk
