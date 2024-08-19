@@ -20,11 +20,6 @@ jobs:
 
       - uses: ./
         with:
-          args: version
-          # user latest always
-
-      - uses: ./
-        with:
           args: gen
 
       - uses: ./

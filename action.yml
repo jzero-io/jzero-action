@@ -22,5 +22,5 @@ runs:
     - name: Run Jzero container
       shell: bash
       run: |
-        docker run --rm jaronnie/jzero:${{inputs.version}} ${{inputs.args}} 
+        docker run --rm -v ${PWD}:/app jaronnie/jzero:${{inputs.version}} ${{inputs.args}}
         
