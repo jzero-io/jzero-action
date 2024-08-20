@@ -16,7 +16,7 @@ jobs:
       - uses: jzero-io/jzero-action@v1
         with:
           args: version
-          version: v0.22.0
+          version: v0.23.7
 
       - name: cd examples
         run: cd examples
