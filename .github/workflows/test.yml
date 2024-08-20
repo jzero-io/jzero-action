@@ -27,7 +27,7 @@ jobs:
 
       - uses: jzero-io/jzero-action@v1
         with:
-          args: gen sdk --module github.com/jzero/test --output test
+          args: gen sdk --goModule github.com/jzero/test --output test
 
       - name: list test sdk
         run: ls -l test
